@@ -1,0 +1,4 @@
+
+12.3
+复习mapreduce编程
+配置完成linux虚拟机
