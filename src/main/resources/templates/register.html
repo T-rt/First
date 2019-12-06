@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Register</title>
+</head>
+<body>
+ 
+<script language="javascript">
+    function register() {
+        console.log("1111111111");
+        var number = document.getElementById("number").value;
+        var sex = document.getElementById("sex").value;
+        var age = document.getElementById("age").value;
+        var reg1 = /\d{10}/;
+        var reg2 = /^(男|女)$/;
+        var reg3 = /^\d{2}$/;
+        console.log(number);
+        if (!reg1.test(number)) {
+            console.log("222222");
+            alert("请输入10个数字");
+            return false;
+        }
+        if (!reg2.test(sex)) {
+            alert("请输入男或女");
+            return false;
+        }
+        if (!reg3.test(age)) {
+            alert("请输入正确的年龄");
+            return false;
+        }else{
+        	
+            return false;
+        }
+            
+    }
+
+</script>
+
+
+<div align="center">
+    <form id="register" action="./register" method="post">
+        <h1>
+            系统查询到您未注册，请进行注册！！！！
+        </h1>
+        <div id="content"
+             style="background-color: #EEEEEE; height: 400px; width: 600px; float: bottom;">
+            <h2>学生成绩管理系统 </h2>
+            <br> 学号: <input type="text" name="id" id="number" placeholder="学号为10位数字">
+            <br> 密码: <input type="password" name="password" id="password" placeholder="输入密码"/>
+            <br> 姓名: <input type="text" name="name" id="name">
+            <br> 性别: <input type="text" name="sex" id="sex">
+            <br> 年龄: <input type="text" name="age" id="age">
+            <br>
+<!--                    <input type="submit" value="注册" οnclick="register()">-->
+            <button onclick="register()">注册</button>
+        <a href="/" onClick="javascript :history.back(-1);">返回上一页</a>
+     
+</div>  
+</form>
+</div>
+</body>
+</html>

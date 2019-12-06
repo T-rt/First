@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>学生管理系统登陆界面</title>
+</head>
+<body>
+
+</body>
+<div align="center">
+	<form id="login" action="./login" method="post">
+		<div id="content"
+			style="background-color: #EEEEEE; height: 200px; width: 400px; float: bottom;">
+			<!--判断-->
+			<p style="color: red" th:text="${msg}"
+				th:if="${not #strings.isEmpty(msg)}"></p>
+			<h1>学生成绩管理系统</h1>
+			<br> 学号: <input type="text" name="number"> <br> 密码:
+			<input type="text" name="password"> <br> <input
+				type="submit" value="登录"> <input type="submit" value="注册">
+	</form>
+</div>
+
+</html>
